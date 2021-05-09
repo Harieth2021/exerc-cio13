@@ -1,0 +1,29 @@
+package com.example.exerci13;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    TextView txt1, txt2;
+    Button ler;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        txt1=findViewById(R.id.textView);
+        txt2=findViewById(R.id.textView2);
+        ler=findViewById(R.id.button);
+    }
+
+    public  void  ler(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+        startActivity(intent);
+    }
+}
